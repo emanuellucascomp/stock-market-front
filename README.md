@@ -1,2 +1,2 @@
-# inventory-control
-Inventory control, made with Vue and Vuetify
+# stock-market-front
+Stock market app, made with Vue and Vuetify
