@@ -8,7 +8,7 @@
       <v-toolbar-title>Stock Market</v-toolbar-title>
     </v-app-bar>
     <v-content>
-      <DashboardStock/>
+      <router-view />
     </v-content>
   </v-app>
 </template>
