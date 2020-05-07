@@ -14,15 +14,8 @@
 </template>
 
 <script>
-import DashboardStock from './components/DashboardStock';
-
 export default {
   name: 'App',
-
-  components: {
-    DashboardStock,
-  },
-
   data: () => ({
     //
   }),
