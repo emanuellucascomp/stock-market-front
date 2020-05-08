@@ -82,9 +82,6 @@
       setMain(){
         this.matches = this.mainBrazilianStocks
       },
-      navigate(stock){
-        console.log(stock)
-      }
     },
     mounted(){
       this.setMain()

@@ -36,12 +36,13 @@
           </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
-    <v-btn color="primary" dark>Return to dashboards</v-btn>
+    <v-btn color="primary" dark @click="goHome">Return to dashboards</v-btn>
   </v-container>
 </template>
 
 <script>
   import { getStock } from '../service/service'
+  import router from '../router'
 
   export default {
     data(){
@@ -53,13 +54,16 @@
         }
     },
     methods: {
-      async getStock(){
+      getStock(){
         getStock(this.stockSymbol).then(stock => {
           this.stock = stock
           this.lastUpdated = this.stock["Meta Data"]["3. Last Refreshed"]
           this.values = this.stock["Time Series (Daily)"][`${this.lastUpdated}`]
         })
       },
+      goHome(){
+        router.push("/")
+      }
     },
     beforeMount(){
       this.stockSymbol = this.$route.params.symbol
