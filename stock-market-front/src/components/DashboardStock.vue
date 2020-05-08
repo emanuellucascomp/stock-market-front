@@ -4,7 +4,7 @@
       v-model="firststockName"
       :rules="stockNameRules"
       :counter="10"
-      label="Enter a stock name to search"
+      label="Enter a stock name to search and press ENTER"
       required
       @keyup.enter="searchStock"
     ></v-text-field>
