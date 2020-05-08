@@ -12,7 +12,7 @@ const routes = [
     component: DashboardStock
   },
   {
-    path: "/detail",
+    path: "/detail/:symbol",
     name: "stockDetail",
     component: StockDetail
   }

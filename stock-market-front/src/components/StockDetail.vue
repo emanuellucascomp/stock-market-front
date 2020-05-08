@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    Detail
+    {{ stockSymbol }}
   </v-container>
 </template>
 
@@ -8,8 +8,11 @@
   export default {
     data(){
         return {
-
+          stockSymbol: ''
         }
+    },
+    created(){
+      this.stockSymbol = this.$route.params.symbol
     }
   }
 </script>
