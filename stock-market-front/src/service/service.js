@@ -4,10 +4,10 @@ const BASE_URL = 'http://127.0.0.1:5000/'
 
 export function getStock(stock){
     return axios.get(BASE_URL + '/stock',{
-        params: {
-            symbol: stock
-        }
-    })
+                    params: {
+                        symbol: stock
+                    }
+                }).then(response => { return response.data })
 }
 
 export function searchStock(stock){
